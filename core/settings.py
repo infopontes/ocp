@@ -28,8 +28,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # apps de terceiros
+    'rolepermissions',
+    'django_extensions',
     # apps do projeto
     'users.apps.UsersConfig',
+    'gestao',
+    'area',
+    'manancial',
+    'pipeiro',
 ]
 
 MIDDLEWARE = [
@@ -114,6 +120,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ROLEPERMISSIONS_MODULE = 'core.roles'
 
 # adicionar app usuários personalizados
 AUTH_USER_MODEL = "users.User"
